@@ -232,7 +232,7 @@ struct CenterHubView: View {
             .overlay(
                 // Add a subtle border for definition
                 Circle()
-                    .stroke(Color(red: 0.17, green: 0.18, blue: 0.20), lineWidth: 2)
+                    .stroke(Color.black, lineWidth: 2)
             )
     }
 }
