@@ -142,7 +142,7 @@ struct SpeedometerDialView: View {
             )
             .trim(from: 0, to: currentValue.progress)  // Only show part of the arc based on progress
             .stroke(
-                Color(red: 0.36, green: 0.68, blue: 0.89),  // Blue color
+                Color(red: 0.33, green: 0.62, blue: 0.80),  // Blue color
                 style: StrokeStyle(lineWidth: 8, lineCap: .round)  // Rounded ends
             )
             .frame(width: 270, height: 270)
@@ -254,8 +254,8 @@ struct NeedleView: View {
                 // Create a gradient effect on the needle
                 LinearGradient(
                     colors: [
-                        Color(red: 0.36, green: 0.68, blue: 0.89),  // Light blue
-                        Color(red: 0.20, green: 0.60, blue: 0.86)   // Dark blue
+                        Color(red: 0.33, green: 0.62, blue: 0.80),  // Light blue (549FCD)
+                        Color(red: 0.25, green: 0.55, blue: 0.75)   // Darker shade of 549FCD
                     ],
                     startPoint: .top,
                     endPoint: .bottom
@@ -266,7 +266,7 @@ struct NeedleView: View {
             .offset(y: -47.5)  // Move it up so it pivots from the center
             .rotationEffect(.degrees(angle))  // Rotate it to the correct angle
             .shadow(
-                color: Color(red: 0.36, green: 0.68, blue: 0.89).opacity(isAnimating ? 0.8 : 0.5),
+                color: Color(red: 0.33, green: 0.62, blue: 0.80).opacity(isAnimating ? 0.8 : 0.5),
                 radius: isAnimating ? 8 : 5
             )  // Add a glowing effect when animating
             .scaleEffect(isAnimating ? 1.05 : 1.0)  // Make it slightly larger when animating
@@ -290,7 +290,7 @@ struct ValueDisplayView: View {
             Spacer()  // Push the text to the bottom of the available space
             Text(value)
                 .font(.system(size: 36, weight: .bold))  // Make it big and bold
-                .foregroundColor(Color(red: 0.4, green: 0.7, blue: 0.9))  // Blue color
+                .foregroundColor(Color(red: 0.33, green: 0.62, blue: 0.80))  // Blue color
                 .padding(.bottom, 35)  // Add some space below
                 .scaleEffect(isAnimating ? 1.1 : 1.0)  // Make it slightly larger when animating
                 .animation(.easeInOut(duration: 0.3), value: isAnimating)  // Smooth the animation
